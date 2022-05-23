@@ -1,0 +1,12 @@
+--- # testing roles concept
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+
+
+  roles:
+    - testroles
+

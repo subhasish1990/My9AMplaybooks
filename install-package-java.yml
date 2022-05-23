@@ -1,0 +1,12 @@
+--- # installing software
+- hosts: webservers
+  user: ansible
+ # become: yes  
+  connection: ssh
+
+
+  tasks:
+    - name: install package java
+      yum:
+        name: java
+        state: present  

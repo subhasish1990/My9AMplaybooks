@@ -1,0 +1,18 @@
+--- # my work section
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+
+
+  vars:
+    user: sunny
+    
+
+
+  tasks: 
+    - name: creating user {{user}} 
+      user:
+       name: "{{user}}"   

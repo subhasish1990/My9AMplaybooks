@@ -1,0 +1,11 @@
+--- # create user
+- name: my test playbook
+  hosts: all
+  become: yes
+  connection: ssh
+    
+
+  tasks:
+    - name: creating user
+      user: 
+       name: hari 

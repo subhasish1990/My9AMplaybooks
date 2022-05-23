@@ -1,0 +1,19 @@
+--- # my loops playbook
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+
+  tasks:
+    - name: installing multiple softwares
+      yum: name='{{item}}' state=installed
+      with_items:
+             - httpd
+             - mysql
+             - tree 
+             - java
+             - docker
+             - git
+
